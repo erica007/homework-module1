@@ -189,3 +189,55 @@
         font-weight: bold;
         background: #bde1ff;
     }
+/* Contact Page */
+    main h1 {
+        color: #9ed034;
+        font-family: arial;
+    }
+
+    main p {
+        color: gray;
+        font-family: arial;
+    }
+    main fieldset legend {
+        color: #4977d1;
+        font-family: arial;
+    }
+
+    label {
+        display: block;
+        margin: 15px 0 0 0;
+    }
+    input {
+        width: 500px;
+    }
+    input[type="radio"] {
+        width: 25px;
+    }
+    textarea {
+        width: 500px;
+        height: 300px;
+    }
+    input [type="submit"] {
+        display: block;
+        margin: 20px 1 10px 0;
+        width: 100px;
+    }
+    input[type=button], input[type=submit] {
+        background-color: #4977d1;
+        width: 100px;
+        border: none;
+        color: white;
+        padding: 16px 8px;
+        text-decoration: none;
+        margin: 4px 410px;
+        cursor: pointer;
+      }
+      fieldset {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px solid green;
+        border-radius: 4px;
+      }
