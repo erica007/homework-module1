@@ -169,19 +169,31 @@
         border-spacing: 3em 0em ;
         border-collapse: separate;
         border-color: #fff;
+        padding: 0em 0em 5em 0em;
     }
 
+    
     #gallery th {
         background: #852b1b;
         width: 10px;
         height: 40px;
+        border-color: #fff;
         vertical-align: middle;
         color: #fff;
     }
+    #gallery tbody + thead::before {
+        content: "";
+        height: 3em;
+        display: table-row;
+        background-color: #fff;
+    }
+    
 
     #gallery img{
         max-width: 600px;
         background-color: #fff;
+        border-color: #fff;
+        padding: 0%;
         max-height: auto;
         display: block;
     }
