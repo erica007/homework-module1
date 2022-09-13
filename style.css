@@ -164,21 +164,26 @@
         margin: 4em auto 0 auto;
     }
 
-    #gallery table {
+    #gallery {
         width: 100px;
-
+        border-spacing: 3em 0em ;
+        border-collapse: separate;
+        border-color: #fff;
     }
 
-    #gallery th{
+    #gallery th {
         background: #852b1b;
+        width: 10px;
+        height: 40px;
+        vertical-align: middle;
         color: #fff;
     }
 
-    #gallery th,td {
-        width: 10px;
-        height: 75px;
-        vertical-align: middle;
-        border: solid 1px #852b1b;
+    #gallery img{
+        max-width: 600px;
+        background-color: #fff;
+        max-height: auto;
+        display: block;
     }
 
     caption {
