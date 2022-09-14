@@ -32,7 +32,10 @@
             </div>
 
         </header>
-
+        <section id="timeofday">
+            <span>Your Current Local Time: </span>
+            <span id="clock"></span>
+        </section>
 
 
         <!--Main Content-->
@@ -89,6 +92,18 @@
             </div>
         </footer>
             <!--End Containert-->
+        <!-- Javascript Codes-->
+        <script>
+            // create a time data function
+            function currentTime() {
+                // Declare Variables
+                var d = new Date(); //get the current date
+                var hr = d.getHours(); //get current hours
+                var min = d.getMinutes(); //GET current minutes
+                var sec = d.getSeconds(); //get current seconds
+                var ampm; //declare empty variable to store AM or PM
+            }
+        </script>
 
 </body>
 
