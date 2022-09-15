@@ -36,8 +36,6 @@
             <span>Your Current Local Time: </span>
             <span id="clock"></span>
         </section>
-
-
         <!--Main Content-->
         <main>
             <h2>Introducing California's Greatest Cliffs</h2>
@@ -91,7 +89,7 @@
                     All contents are not intended for any commercial gain or use.</p>
             </div>
         </footer>
-            <!--End Containert-->
+
         <!-- Javascript Codes-->
         <script>
             // create a time data function
@@ -102,7 +100,32 @@
                 var min = d.getMinutes(); //GET current minutes
                 var sec = d.getSeconds(); //get current seconds
                 var ampm; //declare empty variable to store AM or PM
+
+                // add 0 to single digits for seconds
+                if (sec < 10) {
+                    sec = "0" + sec;
+                }
+                // add 0 to single digits for minutes
+                if (min < 10) {
+                    min = "0" + min;
+                }
+                //Determin AM or PM string
+                if (hr == 12) {
+                    ampm = "PM";
+                } else if ( hr > 12) {
+                    hr -= 12;
+                    ampm = "PM";
+                } else {
+                    ampm = "AM";
+                }
+                // Assemble time format to display
+                var time = hr + ":"+ min +":" + sec + " "+ ampm;
+                document.getElementById("clock").innerText = time;
+                setInterval(currentTime,1000);
             }
+            
+            currentTime();
+                // Run time data function every 1 second
         </script>
 
 </body>
