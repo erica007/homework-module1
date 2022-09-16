@@ -53,7 +53,7 @@
 
         <section>
             <ul id="partners">
-                <li class="partner">
+        <!--    <li class="partner">
                     <img src="images/partner-bustour.png" alt="Partner Bus Tours">
                 </li>
                 <li class="partner">
@@ -70,8 +70,9 @@
                 </li>
                 <li class="partner">
                     <img src="images/partner-tourgroup.png" alt="Partner Tour Group">
-                </li>
-            </ul>
+                </li>  
+        -->
+            </ul> 
         </section>
 
         <!--Footer Information-->
@@ -100,6 +101,10 @@
                 var min = d.getMinutes(); //GET current minutes
                 var sec = d.getSeconds(); //get current seconds
                 var ampm; //declare empty variable to store AM or PM
+                var utchr = d.getUTCHours(); //get the GMT
+                var timeDiff; 
+                var adjTimeDiff; 
+                var timeZone;
 
                 // add 0 to single digits for seconds
                 if (sec < 10) {
@@ -118,14 +123,37 @@
                 } else {
                     ampm = "AM";
                 }
+
+                if (utchr > 12) {
+                    utchr -= 12;
+                } else {
+                    utchr = 12;
+                }
+
+                timeDiff = utchr + hr;
+                adjTimeDiff = Math.abs(timeDiff);
+
+                if(adjTimeDiff ==4) {
+                    timeZone = 'ET';
+                } else if (adjTimeDiff ==5) {
+                    timeZone = 'CT';
+                } else if (adjTimeDiff ==6) {
+                    timeZone = 'MT';
+                } else if (adjTimeDiff ==7) {
+                    timeZone = 'PT';
+                } else {
+                    timeZone = '';
+                }
+
                 // Assemble time format to display
-                var time = hr + ":"+ min +":" + sec + " "+ ampm;
+                var time = hr + ":"+ min +":" + sec + " "+ ampm + " " +timeZone;
                 document.getElementById("clock").innerText = time;
                 setInterval(currentTime,1000);
             }
             
             currentTime();
-                // Run time data function every 1 second
+
+          
         </script>
 
 </body>
