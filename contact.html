@@ -95,24 +95,6 @@
 
 <section>
     <ul id="partners">
-        <li class="partner">
-            <img src="images/partner-bustour.png" alt="Partner Bus Tours">
-        </li>
-        <li class="partner">
-            <img src="images/partner-cabinrental.png" alt="Partner Cabin Rental">
-        </li>
-        <li class="partner">
-            <img src="images/partner-campingadv.png" alt="Partner camping Adventure">
-        </li>
-        <li class="partner">
-            <img src="images/partner-collegetours.png" alt="Partner College Tours">
-        </li>
-        <li class="partner">
-            <img src="images/partner-rentalbike.png" alt="Partner Bike Rentals">
-        </li>
-        <li class="partner">
-            <img src="images/partner-tourgroup.png" alt="Partner Tour Group">
-        </li>
     </ul>
 </section>
 
@@ -131,6 +113,22 @@
             All contents are not intended for any commercial gain or use.</p>
     </div>
 </footer>
+<script>
+    var photos = [];
+    var fileNames = [];
+    var imageList = [];
+    var image;
+    var openList = "<li class='partners'>";
+    var closeList = "</li>";
 
+    for (var i=0; i < 6; i++) {
+        fileNames.push("partner" + (i+1));
+        photos.push("<img src='images/" + fileNames[i] + ".png'>");
+        image = openList + photos[i] + closeList;
+        imageList.push(image);
+            }
+
+    document.getElementById("partners").innerHTML = imageList;
+</script>
 </body>
 </html>
