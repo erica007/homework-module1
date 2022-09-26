@@ -85,6 +85,11 @@
             <label>How did you hear about us:</label>  
             <textarea></textarea>
         </div>
+    <!-- Random Codes -->
+        <div class="randomcode">
+            <input type="text" name="randomcode" placeholder="Enter characters">
+            <p id="codes">>/</p>
+        </div>
     
         <div class="button">
             <input type="submit" value="Inquire">
@@ -113,23 +118,6 @@
             All contents are not intended for any commercial gain or use.</p>
     </div>
 </footer>
-<script>
-    var photos = [];
-    var fileNames = [];
-    var imageList = [];
-    var image;
-    var openList = "<li class='partners'>";
-    var closeList = "</li>";
-
-    for (var i=0; i < 6; i++) {
-        fileNames.push("partner" + (i+1));
-        photos.push("<img src='images/" + fileNames[i] + ".png'>");
-        image = openList + photos[i] + closeList;
-        imageList.push(image);
-            }
-
-    document.getElementById("partners").innerHTML = imageList.join("");
-
-</script>
+<script  src="js/site_scripts.js"></script>
 </body>
 </html>
