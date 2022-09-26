@@ -280,12 +280,11 @@
         display: block;
         margin: 20px 1 10px 0;
         width: 100px;
+        color:#fff;
     }
     input[type=button], input[type=submit] {
-        background-color: #4977d1;
         width: 100px;
         border: none;
-        color: white;
         padding: 16px 8px;
         text-decoration: none;
         margin: 10px 350px;
@@ -323,7 +322,6 @@
         height: 2.5em;
         font-size: 1.2em;
         font-weight: bold;
-        background-color: #4977D1;
         color: #ffffff;
         border: none;
     }
@@ -346,8 +344,6 @@
         background: lightgrey;
         margin: 0px 0px 0px 5px;
         padding-top: 18px;
+    }
 
-    }
-    .selected {
-        background: darkgreen;
-    }
+    
