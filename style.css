@@ -288,7 +288,7 @@
         color: white;
         padding: 16px 8px;
         text-decoration: none;
-        margin: 4px 410px;
+        margin: 10px 350px;
         cursor: pointer;
       }
       fieldset {
@@ -317,3 +317,37 @@
         Font: Helvetica, sans-serif;
         color: #125688;
       }
+
+    form .button input{
+        width: 8em;
+        height: 2.5em;
+        font-size: 1.2em;
+        font-weight: bold;
+        background-color: #4977D1;
+        color: #ffffff;
+        border: none;
+    }
+
+    .randomcode {
+        display: flex;
+        justify-content: space-start;
+        height: 40px;
+    }
+    .randomcode input {
+        width: 100px;
+        height: auto;
+        margin-inline-start: 300px;
+        text-align: center;
+    }
+    #codes {
+        width: 95px;
+        height: 26px;
+        text-align: center;
+        background: lightgrey;
+        margin: 0px 0px 0px 5px;
+        padding-top: 18px;
+
+    }
+    .selected {
+        background: darkgreen;
+    }
