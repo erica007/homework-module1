@@ -346,14 +346,36 @@
         padding-top: 18px;
     }
 
-    .activitiesTableSelected {
+    .selected {
         background-color: greenyellow;
         font-weight: bold;
         color: white;
     }
 
-    .ctivitiesTablenotSelected {
-        background-color:rgb(238, 255, 230);
-        font-weight: normal;
-        color: white;
+    #activities main #displaySelected {
+        visibility: hidden;
+        width: 600px;
+        border-style: solid;
+        border-color: #9ed034;
+        border-width: 4px;
+        padding: 5px;
+        margin-inline:800px;
+        display: block;
     }
+    #activities main #displaySelected #result, #activities main #displaySelected #sendinfo {
+        display: inline-block; 
+    }
+    #activities main #result {
+        min-height: 50px;
+        width: 300px;
+        padding: 0;      
+    }
+    #activities main #result h4{
+        margin-bottom:1em;
+        font-size:1.15em;
+    }
+    #activities main #displaySelected #sendinfo input[type="email"]{
+        width: 200px;
+        display: inline-block;
+    }
+   

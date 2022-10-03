@@ -1,17 +1,38 @@
 $(document).ready(function() {
-    $('table tbody tr td').not('td:first-child').hover(function() {
+    $('td').not('td:first-child').hover(function() {
+        var DisplayText;
         DisplayText = $(this).text();
         if(DisplayText !== 'Not Available') {
             $(this).css({cursor: 'pointer'})
         }
-    }).click(function() {
+    });
+
+    $("td").click(function() {
         var DisplayText;
         DisplayText = $(this).text();
-        if(DisplayText !== 'Not Available') {
-            $(this).toggleClass("activitiesTableSelected");
-        } else { 
-            $(this).toggleClass("activitiesTablenotSelected");
-            
-        };
+        if(DisplayText != 'Not Available') {
+            $(this).toggleClass("selected");
+
+            if ($(this).hasClass("selected")) {
+                $("#displaySelected").css("visibility", "visible");
+                $("#displaySelected").css("margin-top", "2em");
+                $("#result").append("<p>" + DisplayText + "</p>");             
+            } else {
+                $("#result p:contains(" + DisplayText + ")").remove();
+
+                if ($("#result").has("p").length == false) {
+                    $("#displaySelected").css("visibility", "hidden");
+                    $("#displaySelected").css("margin-top", "0");
+                }
+            }
+        }
     });
+
 });
+
+//Hide displaySelected when load
+function hidedisplaySelected() {
+    document.getElementById("displaySelected").style.visibility = "hidden";
+};
+
+hidedisplaySelected();
