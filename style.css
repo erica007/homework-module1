@@ -346,4 +346,14 @@
         padding-top: 18px;
     }
 
-    
+    .activitiesTableSelected {
+        background-color: greenyellow;
+        font-weight: bold;
+        color: white;
+    }
+
+    .ctivitiesTablenotSelected {
+        background-color:rgb(238, 255, 230);
+        font-weight: normal;
+        color: white;
+    }
