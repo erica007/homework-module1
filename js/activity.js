@@ -9,14 +9,17 @@ $(document).ready(function() {
 
     $("td").click(function() {
         var DisplayText;
+        var thIndex = $(this).index();
+        var thText = $("table").find("th").eq(thIndex).text()
         DisplayText = $(this).text();
+      
         if(DisplayText != 'Not Available') {
             $(this).toggleClass("selected");
 
             if ($(this).hasClass("selected")) {
                 $("#displaySelected").css("visibility", "visible");
                 $("#displaySelected").css("margin-top", "2em");
-                $("#result").append("<p>" + DisplayText + "</p>");             
+                $("#result").append("<p>" + DisplayText + " at " + thText + "</p>");             
             } else {
                 $("#result p:contains(" + DisplayText + ")").remove();
 
