@@ -5,9 +5,10 @@
         padding-top: 3em;
     }
 
-    #home header {
-        background: no-repeat lightgrey url(images/cliff_ocean.jpg);
-        background-size: 100%;
+    #home {
+        margin: 40px;
+        background: no-repeat white url(images/cliff_ocean.jpg);
+        background-size: 100% 415px;
     }
     #cliffs header {
         background: no-repeat lightgrey url(images/forest_cliff.jpeg);
@@ -25,15 +26,16 @@
         background-size: 100%;
     }
 
-    .main-header {
+    #main-header {
         background-color: rgb(255, 255, 255, 0.8);
         width: 750px;
         margin: 2em auto 0 auto;
         min-height: 100px;
         height: 100px;
+        opacity: 80%;
     }
 
-    .main-header .logo img {
+    #main-header .logo img{
         width: 100px;
         height: 100px;
         margin: 0 2em 0 0;
@@ -71,10 +73,56 @@
         color: #fff;
     }
 
+    @media (max-width: 991px) {
+        #navbarContent {
+          width: 250px;
+          position: absolute;
+          background-color: rgba(249, 249, 252, 0.7);
+          top: 105px;
+          right: 24px;
+        }
+      
+        #navbarContent ul {
+          border: 1px solid rgba(253, 253, 253, 0.6);
+        }
+      
+        #navbarContent ul li:not(:last-child) {
+          border-bottom: 1px solid rgba(247, 248, 247, 0.6);
+        }
+      }
+
+      .navbar-nav > li > .dropdown-menu {background-color: #e7e7e7;  } 
     /* Main */
-    main {
-        margin: 5em 5em 5em 5em;
-    }
+    /* Main Section */
+#homeMainH1 {
+    text-align: center;
+}
+
+.homeMainP div {
+    border: 1px solid rgb(137, 61, 61);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.homeMainP h2 {
+    margin: 15px;
+    text-align: center;
+}
+
+.homeMainP p {
+    margin: 15px;
+}
+
+.homeMainP {
+    display: grid;
+}
+
+.homeMainP1 {
+    grid-area: homeMainP1;
+}
+.homeMainP2 {
+    grid-area: homeMainP2;
+}
 
     .gallery {
         display: grid;
@@ -379,3 +427,177 @@
         display: inline-block;
     }
    
+/* MEDIA QUERIES */
+
+ /* Small devices (portrait tablets and phones, upto 600px) */
+ @media only screen and (max-width: 600px) {
+    .homeMainP {
+        /* grid-template-columns: 1fr 0.03fr 1fr; */
+        grid-template-areas:
+        'homeMainP1'
+        '.'
+        'homeMainP2';
+    }
+    section .partners .partner {
+        padding: 2.5em;
+    }
+}
+
+ /* Small devices (portrait tablets and phones, 600px and up) */
+ @media only screen and (min-width: 600px) {
+    .homeMainP {
+        /* grid-template-columns: 1fr 0.03fr 1fr; */
+        grid-template-areas:
+        'homeMainP1'
+        '.'
+        'homeMainP2';
+    }
+}
+
+ /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .homeMainP {
+        grid-template-columns: 0.3fr 1fr 0.03fr 1fr 0.3fr ;
+        /* grid-template-rows: 200px 5px 200px; */
+        grid-template-areas:
+        '. homeMainP1 . homeMainP2. ';
+    }
+    section .partners .partner {
+        padding: 2em;
+    }
+}
+ /* Medium devices (landscape tablets, upto 768px) */
+@media only screen and (max-width: 768px) {
+    footer #nondisclaimer .copy {
+        padding: 3.5em 0em 3.5em 0em;
+        text-align: center;
+        float: none;
+        font-size: 0.9em;
+    }
+}
+ /* Large devices (laptops/desktops, upto 992px) */
+@media only screen and (max-width: 991px) {
+    .main-menu ul li {
+        list-style-type: none;
+        /* display: inline-block; */
+        float: left;
+        padding-left: 2em;
+        padding-right: 1em;
+        border-left: 1px solid rgba(202, 204, 202, 0.6);
+        line-height: 40px;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+    .main-menu ul li a {
+        text-decoration: None;
+        color: #888;
+    }
+    .main-menu ul li a:hover {
+        color: #9ed034;
+    }
+    .main-menu ul li {
+        /* background: rgb(255, 255, 255, 0.8); */
+        background-color: rgba(38, 41, 61, 0.7);
+        border: None;
+    }
+    .main-menu ul li.active {
+        background: #9ed034;
+        border: None;
+    }
+    .main-menu ul li.active a {
+        color:#fff;
+    }
+    .nav-item {
+        width: 10em;
+        position: relative;
+        left: 12.5em;
+        top: 3.75em;
+    }
+}
+
+ /* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 991px) {
+    .main-menu {
+        position: absolute;
+        right: 0em;
+        top: 0em;
+        /* margin-top: -8px; */
+    }
+    .main-menu ul li {
+        padding-left: 1.2em;
+        padding-right: 1.3em;
+        line-height: 84px;
+        text-transform: uppercase;
+    }
+    .main-menu ul li a:hover {
+        color: #9ed034;
+    }
+    .main-menu ul li.active a{
+        color:#fff;
+    }
+    /* Header background image responsive */
+    header {
+        width: 100%;
+        min-height: 475px;
+    }
+    #home {
+        background-size: 100% 615px;
+    }
+    #cliffs {
+        background-size: 100% 600px;
+    }
+    #activities {
+        background-size: 100% 600px;
+    }
+    #contact {
+        background-size: 100% 600px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .contactFieldset {
+        width: 270px;
+    }
+    form {
+        overflow-y: scroll;
+    }
+}
+
+@media only screen and (max-width: 841px) {
+    .formInnerBorder {
+        margin-right: 0px;
+    }
+    .textbox input{
+        width: 96%;
+    }
+    .commentbox textarea {
+        width: 96%;
+        height: 200px;
+    }
+    .randomcode input{
+        font-size: 16px;
+        display: block;
+        margin-left: calc(96% - 175px);
+    }
+    #codes {
+        margin-top: 10px;
+        display: block;
+        margin-left: calc(96% - 96px);
+    }
+    form button {
+        margin-left: calc(96% - 128px);
+    }
+}
+
+@media only screen and (min-width: 842px) {
+    .formInnerBorder {
+        width: 520px;
+        margin-right: 0px;
+    }
+    .randomcode {
+        margin-left: 215px;
+    }
+    form button {
+        margin-left: 373px;
+    }
+}
