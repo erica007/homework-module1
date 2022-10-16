@@ -1,41 +1,70 @@
 <!DOCTYPE html>
 <html>
-<head>
-    
-<title>Homework Week1Day1</title> 
-<meta charset="utf-8">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<head>
+    <title>Homework Week1Day1</title>
+    <meta charset="UTF-8">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Refer CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="custom.css">
+    <!-- For grid area -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Bootstrap jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
+
 <body id="contact" oload="disableButton(true)">
 <!--Container to wrap everything-->
-<DIV id="container">
-
-<!--Brand of Website-->    
-<header>
-    <div class="main-header">
-        <div class="logo">
-            <img src="images/logo.png" alt="Great Cliff's Logo" width="125">
+<body id="contact" onLoad="disableButton(true)">
+    <div id="container">
+        <div class="main-header sticky-top ">
+            <div class="logo">
+                <img src="images/logo.png" alt="Great Cliffs Logo" width="125">
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" 
+                        type="button" 
+                        data-toggle="collapse" 
+                        data-target="#navbarNavDropdown" 
+                        aria-controls="navbarNavDropdown" 
+                        aria-expanded="false" 
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="main-menu collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cliffs.html">Cliffs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="activities.html">Activities</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-        <nav class="main-menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="cliffs.html">Cliffs</a></li>
-                <li><a href="activities.html">Activities</a></li>
-                <li class="active"><a href="contact.html">Contact</a></li>
-            </ul>
-
-        </nav>
-    </div>
-    
-</header>
-
-
+   
+<header></header>   
 
 <!--Main Content-->
 <main>
-    <h1>Contacting Us</h1>
+    <h1 class="h1">Contacting Us</h1>
     <p>
     You can drop by the visitors information center at the cliff site that you plan on visiting. They are open
     7 days a week from 8.00AM to 5.00PM. You can also contact us directly if you need additional information about 
@@ -85,14 +114,16 @@
             <label>How did you hear about us:</label>  
             <textarea></textarea>
         </div>
+
     <!-- Random Codes -->
         <div class="randomcode">
-            <input type="text" name="randomcode" placeholder = "Enter characters" id="codeentered">
+            <input type="text" name="randomcode" placeholder="Enter characters" id="codeentered">
             <p id="codes"></p>
-         </div>
-        <div class="button">
-            <input type="submit" value="Inquire" id="submit">
-        </div> 
+        </div>
+        <button class="btn btn-primary" type="submit" id="sendButton" >
+            <i class="fa fa-send-o"></i> Send
+        </button>
+        </div>
     </fieldset>  
     </form>
 </main> <!--End Main Content-->
@@ -103,23 +134,30 @@
 </section>
 
 <!--Footer Information-->
-<footer>&copy; Copyright 2020 :: GreatCliffs.com
-    <div id="nondisclaimer"> 
-        <div class="copy"></div>
+<footer>
+    <div id="nondisclaimer">
+        <!-- Copyright -->
+        <div class="copy"> &copy;Copyright 2020 :: GreatCliffs.com</div>
+
+        <!-- Social Image Area -->
         <div class="social">
             <a href="#" class="fa fa-facebook"></a>
             <a href="#" class="fa fa-instagram"></a>
             <a href="#" class="fa fa-twitter"></a>
         </div>
+        <!-- Social Image Area End -->
+
     </div>
     <div id="disclaimer">
-        <p>This website is designed and created solely for educational purposes only at Westcliff University.
-            All contents are not intended for any commercial gain or use.</p>
+        <p>This website is designed and created solely for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use</p>
     </div>
 </footer>
+<!-- Footer Area End -->
+
+</div>
 
 <script  src="js/site_scripts.js"></script>
-
+<script src="js/randomcodes.js"></script>
 
 </body>
 </html>

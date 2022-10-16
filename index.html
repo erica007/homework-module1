@@ -23,16 +23,18 @@
 </head>
 
 <body id="home">
-    <!--Container to wrap everything-->
-    <DIV id="container">
+    <!-- Wrap Container Area -->
+    <div id="container">
+        <div class="main-header sticky-top">
 
-        <!--Brand of Website-->
-            <div class="main-header sticky-top" id="main-header">
-                <div class="logo">
-                    <img src="images/logo.png" alt="Great Cliff's Logo" width="125">
-                </div>
+            <!-- Logo Area-->
+            <div class="logo">
+                <img src="images/logo.png" alt="Great Cliffs Logo" width="125">
+            </div>
+            <!-- Logo Area End -->
 
- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!-- Navigation Content Area -->
+            <nav class="navbar navbar-expand-lg navbar-dark">
                 <a class="navbar-brand" href="#"></a>
                 <button class="navbar-toggler" 
                         type="button" 
@@ -60,15 +62,19 @@
                     </ul>
                 </div>
             </nav>
-            </div>
+            <!-- Navigation Content Area End -->
+        </div>
+        <!-- Main-Header Nav Area End -->
 
         <header></header>
 
+        <!-- Current Local Time -->
         <section id="timeofday">
-            <span class="span1">Your Current Local Time: </span>
+            <span>Your Current Local Time: </span>
             <span id="clock"></span>
         </section>
-        <!--Main Content-->
+
+        <!-- Main Content Area -->
         <main>
             <div>
                 <h1  class="h1" id="homeMainH1">Introducing California's Greatest Cliffs</h1>
@@ -82,32 +88,67 @@
                         <p>Located within a 100 mile radius from Irvine, California, they can be reached by roads easily. The closest cliff to Irvine is West Cliff, which is the most popular and most visited.</p>
                     </div>
                 </div>
+                   
             </div>
         </main>
-        <!--End Main Content-->
 
+        <!-- End of main Content Area -->
+
+        <!-- Image Area -->
         <section>
-            <ul id="partners">
-            </ul> 
+            <ul class="partners" id="partners">
+                <li class="partner col-6 col-sm-4 col-md-3 col-lg-1-half">
+                    <img src="images/partners/partner-bustour.png" alt="Partner Bus Tours">
+                </li>
+                <li class="partner col-6 col-sm-4 col-md-3 col-lg-1-half">
+                    <img src="images/partners/partner-cabinrental.png" alt="Partner Cabin Rental">
+                </li>
+                <li class="partner col-6 col-sm-4 col-md-3 col-lg-1-half">
+                    <img src="images/partners/partner-campingadv.png" alt="Partner Camping Adventure">
+                </li>
+                <li class="partner col-6 col-sm-4 col-md-3 col-lg-1-half">
+                    <img src="images/partners/partner-collegetours.png" alt="Partner College Tours">
+                </li>
+                <li class="partner col-6 col-sm-4 col-md-3 col-lg-1-half">
+                    <img src="images/partners/partner-rentalbike.png" alt="Partner Bike Rentals">
+                </li>
+                <li class="partner col-6 col-sm-4 col-md-3 col-lg-1-half">
+                    <img src="images/partners/partner-tourgroup.png" alt="Partner Tour Group">
+                </li>
+            </ul>
         </section>
+        <!-- Image Area End -->
 
-        <!--Footer Information-->
-        <footer>&copy; Copyright 2020 :: GreatCliffs.com
-            <div id="nondisclaimer"> 
-                <div class="copy"></div>
+        <!-- Footer Area -->
+        <footer>
+            <div id="nondisclaimer">
+                <!-- Copyright -->
+                <div class="copy"> &copy;Copyright 2020 :: GreatCliffs.com</div>
+
+                <!-- Social Image Area -->
                 <div class="social">
                     <a href="#" class="fa fa-facebook"></a>
                     <a href="#" class="fa fa-instagram"></a>
                     <a href="#" class="fa fa-twitter"></a>
                 </div>
-            
+                <!-- Social Image Area End -->
+
+            </div>
             <div id="disclaimer">
-                <p>This website is designed and created solely for educational purposes only at Westcliff University.
-                    All contents are not intended for any commercial gain or use.</p>
+                <p>This website is designed and created solely for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use</p>
             </div>
         </footer>
-    </div>
+        <!-- Footer Area End -->
 
+    </div>
+    <!-- Wrap Container End -->
+
+    <!-- JavaScript Codes -->
+    <!-- Why the bottom of the page? Because JS are not needed until the page is fully loaded -->
+   
+    <!-- Digital Clock -->
+    <script src="js/digclock.js"></script>
+    
         <!-- Javascript Codes-->
         <script  src="js/digclock.js"></script>
         <script  src="js/site_scripts.js"></script>

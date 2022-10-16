@@ -1,51 +1,54 @@
     /* Header */
     header {
         width: 100%;
-        min-height: 400px;
-        padding-top: 3em;
+        min-height: 275px;
     }
+
+    h1 {
+        color: #9ed034;
+        margin: 50px 100px 30px;
+    }
+    h2 {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    p {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    /* Index Page */
 
     #home {
         margin: 40px;
         background: no-repeat white url(images/cliff_ocean.jpg);
         background-size: 100% 415px;
     }
-    #cliffs header {
-        background: no-repeat lightgrey url(images/forest_cliff.jpeg);
-        background-size: 100%;
-    }
 
-
-    #activities header {
-        background: no-repeat lightgrey url(images/runfly.jpeg);
-        background-size: 100%;
-    }
-
-    #contact header {
-        background: no-repeat lightgrey url(images/cliff_rock.jpeg);
-        background-size: 100%;
-    }
-
-    #main-header {
+    .main-header {
         background-color: rgb(255, 255, 255, 0.8);
-        width: 750px;
-        margin: 2em auto 0 auto;
+        width: 80%;
+        /* margin: 2em auto 0 auto; */
+        margin: 0 auto 0 auto;
         min-height: 100px;
         height: 100px;
-        opacity: 80%;
+        /* top: 100px; */
     }
-
-    #main-header .logo img{
+    .main-header .logo img{
         width: 100px;
         height: 100px;
         margin: 0 2em 0 0;
         float: left;
     }
 
+
     /* Navigation */
     .main-menu {
-        margin-left: 227px;
         font-weight: 400;
+        margin-top: 0px;
+        position: absolute;
+        top: 47px;
+        right: 175px
     }
 
     .main-menu ul li {
@@ -60,17 +63,22 @@
         font-size: 14px;
     }
 
+    .main-menu ul li a {
+        text-decoration: None;
+        color: #888;
+    }
     .main-menu ul li a:hover {
         color: #9ed034;
     }
-
     .main-menu ul li.active {
         background: #9ed034;
-        border: none;
+        border: None;
     }
-
     .main-menu ul li.active a {
-        color: #fff;
+        color:#fff;
+    }
+    .navbar-toggler{
+        vertical-align: middle;
     }
 
     @media (max-width: 991px) {
@@ -92,8 +100,9 @@
       }
 
       .navbar-nav > li > .dropdown-menu {background-color: #e7e7e7;  } 
+
+
     /* Main */
-    /* Main Section */
 #homeMainH1 {
     text-align: center;
 }
@@ -138,23 +147,22 @@
     }
 
     section #partners {
-        width: 1200px;
         padding: 2em 0 2em 0;
-        margin: 0 auto;
+        margin: 2em auto 0;
         text-align: center;
     }
 
     section #partners .partners {
         display: inline-block;
-        margin: 0 0.75em;
+        margin: 1em 1em;
         padding: 1.3em 1.5em;
         background-color: #fff;
         border-radius: 50%;
     }
 
     section #partners .partners img {
-        width: 90px;
-        height: 90px;
+        width: 100%;
+        height: 100px;
     }
 
     /* Footer */
@@ -207,145 +215,149 @@
         color: white;
     }
 
-    table {
-        width: 1000px;
-        margin: 4em auto 0 auto;
-    }
+    /* Activities Page */
+#activities {
+    margin: 40px;
+}
+#activities {
+    background: no-repeat white url(images/runfly.jpeg);
+    background-size: 100% 400px;
+}
+.activitiesDivTable {
+    overflow-y: scroll;
+}
+#activitiesTable {
+    /* width: 1000px; */
+    margin: 4em auto 0 auto;
+}
+#activitiesTable caption {
+    background-color: #852B1B;
+    height: 40px;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-top: 1em;
+    vertical-align: center;
+}
+thead {
+    background-color: #BDE1FF;
+    text-align: center;
+}
+tbody {
+    background-color: #EEFFE6;
+    text-align: center;
+}
+thead, td {
+    width: 225px;
+    height: 75px;
+    vertical-align: middle;
+    border: solid 1px #852B1B;
+}
+thead tr td:first-child {
+    width: 125px;
+    height: 50px;
+    background-color: #4977D1;
+    color: #fff;
+}
+td:first-child {
+    font-weight: bold;
+    background: #BDE1FF;
+}
+.activitiesTableSelected {
+    background-color: greenyellow;
+    font-weight: bold;
+    color: white;
+}
 
-    #gallery {
-        width: 100px;
-        border-spacing: 3em 0em ;
-        border-collapse: separate;
-        border-width: 2px;
-        padding: 0em 0em 5em 0em;
-    }
-
-    #gallery td {
-        border-style: hidden!important;
-        
-    }
-
-    #gallery th {
-        background: #852b1b;
-        width: 10px;
-        height: 40px;
-        vertical-align: middle;
-        color: #fff;
-    }
-    #gallery tbody + thead::before {
-        content: "";
-        height: 3em;
-        display: table-row;
-        background-color: #fff;
-    }
     
-
-    #gallery img{
-        max-width: 600px;
-        background-color: #fff;
-        border-color: #fff;
-        padding: 0%;
-        max-height: auto;
-        display: block;
-        border-style: hidden!important;
-    }
-
-    caption {
-        background: #852b1b;
-        height: 40px;
-        color: #fff;
-        font-size: 1.3em;
-        font-weight: bold;
-        padding-top: 1em;
-    }
-
-    thead {
-        background: #BDE1FF;
-    }
-
-    tbody {
-        background: #eeffe6;
-    }
-
-    tbody {
-        background: #eeffe6;
-        text-align: center;
-    }
-
-    th,td {
-        width: 225px;
-        height: 75px;
-        vertical-align: middle;
-        border: solid 1px #852b1b;
-    }
-
-    th:first-child {
-        width:125px;
-        height: 50px;
-        background: #4977d1;
-        color: #fff;
-    }
-
-    td:first-child {
-        font-weight: bold;
-        background: #bde1ff;
-    }
 /* Contact Page */
-    main h1 {
-        color: #9ed034;
-        font-family: arial;
-    }
+#contact{
+    margin: 40px;
+}
+#contact {
+    background: no-repeat white url(images/cliff_rock.jpeg);
+    background-size: 100% 400px;
+}
+#contact .contactinfo {
+    margin: auto 100px;
+}
+#contact form {
+    margin: auto 100px;
+}
 
-    main h2 {
-        color: #9ed034;
-        font-family: arial;
-    }
+#contact #container h1 {
+    color: #9ed034;
+}
+.phone, .email {
+    margin: 10px auto;
+}
+.phone span:first-child {
+    font-weight: bold;
+}
+.email span:first-child {
+    font-weight: bold;
+}
+.textbox label{
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.textbox input{
+    display: block;
+    margin-top: 10px;
+    width: 500px;
+}
+.radios {
+    margin: 10px auto;
+}
+.radios label{
+    font-weight: bold;
+}
+.selectmenu {
+    margin: 10px auto;
+}
+.selectmenu label {
+    font-weight: bold;
+}
+.selectmenu select {
+    width: 150px;
+    text-align: center;
+}
+.commentbox label {
+    display: block;
+    font-weight: bold;
+}
+.commentbox textarea {
+    width: 500px;
+    height: 150px;
+}
+.randomcode input{
+    width: 200px;
+    height: auto;
+    text-align: center;
 
-    main p {
-        color: gray;
-        font-family: arial;
-    }
-    main fieldset legend {
-        color: #4977d1;
-        font-family: arial;
-    }
+}
+.randomcode {
+    display: flex;
+    justify-content: space-start;
+    height: 30px;
+    margin: 1em;
+}
 
-    label {
-        display: block;
-        margin: 15px 0 0 0;
-    }
-    input {
-        width: 500px;
-    }
-    input[type="radio"] {
-        width: 25px;
-    }
-    textarea {
-        width: 500px;
-        height: 300px;
-    }
-    input [type="submit"] {
-        display: block;
-        margin: 20px 1 10px 0;
-        width: 100px;
-        color:#fff;
-    }
-    input[type=button], input[type=submit] {
-        width: 100px;
-        border: none;
-        padding: 16px 8px;
-        text-decoration: none;
-        margin: 10px 350px;
-        cursor: pointer;
-      }
-      fieldset {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        box-sizing: border-box;
-        border: 2px solid green;
-        border-radius: 4px;
-      }
+form button {
+    width: 8em;
+    height: 2.5em;
+}
+
+#codes {
+    width: 95px;
+    height: 26px;
+    text-align: center;
+    background: lightgrey;
+    margin: 0px 0px 0px 5px;
+    padding-top: 18px;
+}
+
       /* Style Clock on Index page */
     #timeofday {
         width: auto;
@@ -374,31 +386,7 @@
         border: none;
     }
 
-    .randomcode {
-        display: flex;
-        justify-content: space-start;
-        height: 40px;
-    }
-    .randomcode input {
-        width: 100px;
-        height: auto;
-        margin-inline-start: 300px;
-        text-align: center;
-    }
-    #codes {
-        width: 95px;
-        height: 26px;
-        text-align: center;
-        background: lightgrey;
-        margin: 0px 0px 0px 5px;
-        padding-top: 18px;
-    }
 
-    .selected {
-        background-color: greenyellow;
-        font-weight: bold;
-        color: white;
-    }
 
     #activities main #displaySelected {
         visibility: hidden;
@@ -535,24 +523,38 @@
     .main-menu ul li.active a{
         color:#fff;
     }
-    /* Header background image responsive */
-    header {
-        width: 100%;
-        min-height: 475px;
-    }
-    #home {
-        background-size: 100% 615px;
-    }
+    /* Cliff Page */
+
+
     #cliffs {
-        background-size: 100% 600px;
+        background: no-repeat white url(images/forest_cliff.jpeg);
+        background-size: 100% 400px;
     }
-    #activities {
-        background-size: 100% 600px;
+    #container #cliffsPhotoSection {
+        background-color: #fff;
     }
-    #contact {
-        background-size: 100% 600px;
+    #container #cliffsPhotoUl {
+        text-align: center;
     }
-}
+    #container #cliffsPhotoUl .cliffPhoto {
+        display: inline-block;
+    }
+    #container #cliffsPhotoUl .cliffPhoto span{
+        display: block;
+        background-color: #852B1B;
+        margin: 0px 15px;
+        line-height: 40px;
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+    }
+    #container #cliffsPhotoUl .cliffPhoto img {
+        width: 400px;
+        height: 200px;
+        margin: 0px 15px 30px 15px;
+    }
+    
+
 
 @media only screen and (max-width: 550px) {
     .contactFieldset {

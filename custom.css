@@ -13,10 +13,7 @@ main .h1{
 .navbar-collapse .navbar-nav .nav-item .nav-link{
     color:#fff;
 }
-#activities #container .sticky-top {
-    /* position: sticky; */
-    /* top: 200px; */
-}
+
 .navbar {
     background-color: rgba(38, 41, 61, 0.7);
     height: 100px;
@@ -46,38 +43,12 @@ table {
     color: #4977D1;
     font-weight: bold;
 }
-/* thead {
-    background-color: #BDE1FF;
-    text-align: center;
-}
-tbody {
-    background-color: #EEFFE6;
-    text-align: center;
-} */
+
 .activitiesTable .activitiesTableHead .tr .td {
-    /* width: 225px;
-    height: 75px;
-    vertical-align: middle; */
+
     border: solid 1px #852B1B;
 }
 .activitiesTable .activitiesTableBody .tr .td {
-    /* width: 225px;
-    height: 75px;
-    vertical-align: middle; */
+
     border: solid 1px #852B1B;
 }
-/* thead tr td:first-child {
-    width: 125px;
-    height: 50px;
-    background-color: #4977D1;
-    color: #fff;
-}
-td:first-child {
-    font-weight: bold;
-    background: #BDE1FF;
-}
-.activitiesTableSelected {
-    background-color: greenyellow;
-    font-weight: bold;
-    color: white;
-} */
